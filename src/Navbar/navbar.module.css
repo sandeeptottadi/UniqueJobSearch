@@ -1,0 +1,289 @@
+.navbar_container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.logo {
+  height: 44px;
+  width: 44px;
+  margin-left: 44px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.title_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.title {
+  color: #3762e3;
+  font-weight: 680;
+  font-size: 1.4rem;
+  font-family: "Raleway", sans-serif;
+  margin-left: 10px;
+}
+
+.title:hover {
+  color: hsl(225, 75%, 40%);
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.link {
+  text-decoration: none;
+  color: hsl(0, 0%, 10%);
+  margin-left: 40px;
+  font-size: 1rem;
+  font-weight: 540;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.link:first-child {
+  margin-left: 0px;
+}
+
+.link_text:hover {
+  color: #3762e3;
+}
+
+.buttons {
+  margin-right: 44px;
+  display: flex;
+  flex-direction: row;
+}
+
+.login_link {
+  margin-right: 44px;
+}
+
+.button {
+  margin-left: 15px;
+  padding: 16px 22px;
+  border: none;
+  font-weight: 450;
+  color: white;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  background-color: transparent;
+  transform: scale(1);
+  transition: 0.2s all ease-in;
+}
+
+.button:hover {
+  color: hsl(0, 0%, 90%);
+  /* transform: scale(0.95); */
+}
+
+.button:first-child {
+  background: linear-gradient(to left, hsl(225, 75%, 60%), hsl(225, 75%, 50%));
+}
+
+.button:first-child:hover {
+  background: linear-gradient(to left, hsl(225, 75%, 57%), hsl(225, 75%, 47%));
+}
+
+.button:last-child {
+  background: linear-gradient(to left, hsl(225, 75%, 35%), hsl(225, 75%, 45%));
+  display: flex;
+  align-items: center;
+}
+
+.button:last-child:hover {
+  background: linear-gradient(to left, hsl(225, 75%, 32%), hsl(225, 75%, 42%));
+  .right_arrow {
+    margin-left: 18px;
+  }
+}
+
+.right_arrow {
+  height: 15px;
+  width: 15px;
+  margin-left: 8px;
+  transition: 0.3s all ease-in-out;
+}
+
+.dropdown_arrow {
+  height: 0px;
+  width: 0px;
+  margin-left: 6px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid #3762e3;
+  transition: 0.3s all ease-in-out;
+}
+
+.link:hover {
+  .dropdown_arrow {
+    transform: rotateX(180deg);
+  }
+}
+
+.hide_dropdown {
+  position: absolute;
+  width: 0;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: 0.2s all ease-in-out;
+}
+
+.show_dropdown {
+  position: absolute;
+  margin-top: 30px;
+  opacity: 1;
+  width: 500px;
+  height: 360px;
+  overflow: hidden;
+  transition: 0.2s all ease-in-out;
+}
+
+.show_dropdown.socials {
+  position: absolute;
+  margin-top: 30px;
+  opacity: 1;
+  width: 410px;
+  height: 300px;
+  overflow: hidden;
+  transition: 0.2s all ease-in-out;
+}
+
+.menubars {
+  display: none;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(to left, hsl(225, 75%, 60%), hsl(225, 75%, 50%));
+  border: none;
+  border-radius: 50%;
+  margin-right: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menubar {
+  width: 33px;
+  height: 3px;
+  border-radius: 999px;
+  background-color: white;
+  margin-bottom: 0px;
+  transition: 0.5s all ease-in-out;
+}
+
+.menubar:first-child {
+  margin-bottom: 6px;
+}
+
+.menubar:nth-child(2) {
+  margin-bottom: 6px;
+}
+
+.menubar:last-child {
+  opacity: 1;
+}
+
+.animate_menubars {
+  transition: 0.3s all ease-in-out;
+}
+
+.animate_menubars:first-child {
+  position: absolute;
+  margin-bottom: 0px;
+  animation: animate_first_menu_bar 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes animate_first_menu_bar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+.animate_menubars:nth-child(2) {
+  position: absolute;
+  margin-bottom: 0px;
+  animation: animate_seond_menu_bar 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+  background-color: transparent;
+}
+
+@keyframes animate_second_menu_bar {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate_menubars:last-child {
+  position: absolute;
+  margin-bottom: 0px;
+  animation: animate_last_menu_bar 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes animate_last_menu_bar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 1000px) {
+  .buttons,
+  .links {
+    display: none;
+  }
+  .menubars {
+    display: flex;
+  }
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  .title_container {
+    justify-content: flex-start;
+  }
+  .title {
+    display: none;
+  }
+  .logo,
+  .menubars,
+  .login_link {
+    margin-left: 20px;
+  }
+}
