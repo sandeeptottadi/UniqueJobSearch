@@ -1,6 +1,11 @@
+# BEGIN WordPress
+
 RewriteEngine On
-RewriteBase /UniqueJobSearch/
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /UniqueJobSearch/index.html [L]
+RewriteRule . /index.html [L]
+
+# END WordPress
