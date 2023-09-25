@@ -44,35 +44,35 @@ export default function Signup() {
           </div>
           <ul>
             <li className={styles.feature}>
-              <img src={green_tick} className={styles.green_tick} />
+              <img alt="tick" src={green_tick} className={styles.green_tick} />
               Job Search
             </li>
             <li className={styles.feature}>
-              <img src={green_tick} className={styles.green_tick} />
+              <img alt="tick" src={green_tick} className={styles.green_tick} />
               Company wise jobs
             </li>
             <li className={styles.feature}>
-              <img src={green_tick} className={styles.green_tick} />
+              <img alt="tick" src={green_tick} className={styles.green_tick} />
               Advice
             </li>
             <li className={styles.feature}>
-              <img src={green_tick} className={styles.green_tick} />
+              <img alt="tick" src={green_tick} className={styles.green_tick} />
               Newsletter
             </li>
             <li className={styles.feature}>
-              <img src={green_tick} className={styles.green_tick} />
+              <img alt="tick" src={green_tick} className={styles.green_tick} />
               Resume templetes
             </li>
             <li className={styles.feature}>
-              <img src={green_tick} className={styles.green_tick} />
+              <img alt="tick" src={green_tick} className={styles.green_tick} />
               Personalized Cover Letters
             </li>
             <li className={styles.feature}>
-              <img src={green_tick} className={styles.green_tick} />
+              <img alt="tick" src={green_tick} className={styles.green_tick} />
               Personalized Chatbot
             </li>{" "}
             <li className={styles.feature}>
-              <img src={green_tick} className={styles.green_tick} />
+              <img alt="tick" src={green_tick} className={styles.green_tick} />
               Emails on new job postings
             </li>{" "}
           </ul>
@@ -98,8 +98,12 @@ export default function Signup() {
           />
           <div className={styles.login_form_container}>
             <button className={styles.google_login}>
-              <img src={google_logo} classNmae={styles.google_logo} /> Login
-              with Google
+              <img
+                alt="google logo"
+                src={google_logo}
+                classNmae={styles.google_logo}
+              />{" "}
+              Login with Google
             </button>
             <div className={styles.hr}>
               <div className={styles.hr_text}>Or</div>

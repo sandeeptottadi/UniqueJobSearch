@@ -38,8 +38,12 @@ export default function Login() {
           />
           <div className={styles.login_form_container}>
             <button className={styles.google_login}>
-              <img src={google_logo} classNmae={styles.google_logo} /> Login
-              with Google
+              <img
+                alt="google logo"
+                src={google_logo}
+                classNmae={styles.google_logo}
+              />{" "}
+              Login with Google
             </button>
             <div className={styles.hr}>
               <div className={styles.hr_text}>Or</div>

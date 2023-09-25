@@ -3,11 +3,11 @@ import styles from "./navbar.module.css";
 import logo from "../logo.svg";
 import { Link } from "react-router-dom";
 import right_arrow from "../Svgs/right_arrow.svg";
-import Resources_dropdown from "./Dropdown/Resources_dropdown";
+import ResourcesDropdown from "./Dropdown/Resources_dropdown";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useInView, motion } from "framer-motion";
-import Socials_dropdown from "./Dropdown/Socials_dropdown";
+import SocialsDropdown from "./Dropdown/Socials_dropdown";
 import Sidebar from "../Sidebar/Sidebar";
 
 export default function Navbar() {
@@ -57,7 +57,7 @@ export default function Navbar() {
         transition={{ duration: 0.5 }}
       >
         <div className={styles.title_container} onClick={() => navigate("/")}>
-          <img className={styles.logo} src={logo} />
+          <img alt="logo" className={styles.logo} src={logo} />
           <div className={styles.title}>Unique JobSearch</div>
         </div>
         <div className={styles.links}>
@@ -72,7 +72,7 @@ export default function Navbar() {
                 <div className={styles.dropdown_arrow}></div>
               </div>
               <div id="resources_dropdown" className={styles.hide_dropdown}>
-                <Resources_dropdown
+                <ResourcesDropdown
                   name="Resources"
                   style={{ width: "100%", height: "100%" }}
                 />
@@ -93,7 +93,7 @@ export default function Navbar() {
                 id="socials_dropdown"
                 className={`${styles.hide_dropdown} ${styles.socials}`}
               >
-                <Socials_dropdown
+                <SocialsDropdown
                   name="Socials"
                   style={{ width: "100%", height: "100%" }}
                 />
@@ -149,7 +149,11 @@ export default function Navbar() {
                 className={styles.button}
               >
                 Get Started{" "}
-                <img className={styles.right_arrow} src={right_arrow} />{" "}
+                <img
+                  alt="right arrow"
+                  className={styles.right_arrow}
+                  src={right_arrow}
+                />{" "}
               </button>
             </div>
             <div className={styles.menubars} onClick={() => animateMenubars()}>

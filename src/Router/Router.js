@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "../Landing_page/LandingPage";
 import Contact from "../Contact/Contact";
 import Pricing from "../Pricing/Pricing";
@@ -8,7 +8,7 @@ import Signup from "../Signup/Signup";
 
 export default function Router() {
   return (
-    <BrowserRouter>
+    <HashRouter basename="/">
       <Routes>
         <React.Fragment>
           {/* <Route path="/" element={<Home />} /> */}
@@ -20,6 +20,6 @@ export default function Router() {
           <Route path="/signup" element={<Signup />} />
         </React.Fragment>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
