@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/UniqueJobSearch/static/css/main.073c9b0a.css",
-    "main.js": "/UniqueJobSearch/static/js/main.924fef69.js",
+    "main.css": "/UniqueJobSearch/static/css/main.81066a7a.css",
+    "main.js": "/UniqueJobSearch/static/js/main.21960cb3.js",
     "static/js/787.3f83c8e8.chunk.js": "/UniqueJobSearch/static/js/787.3f83c8e8.chunk.js",
+    "static/media/google_logo.png": "/UniqueJobSearch/static/media/google_logo.022678459fe8f77aabf7.png",
     "static/media/logo.svg": "/UniqueJobSearch/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/login_background_design.svg": "/UniqueJobSearch/static/media/login_background_design.8fb0b7ca972e4a71ff8d0cd7ca88685e.svg",
     "index.html": "/UniqueJobSearch/index.html",
-    "main.073c9b0a.css.map": "/UniqueJobSearch/static/css/main.073c9b0a.css.map",
-    "main.924fef69.js.map": "/UniqueJobSearch/static/js/main.924fef69.js.map",
+    "static/media/green_tick.svg": "/UniqueJobSearch/static/media/green_tick.11bc560f379c89e83cf2fc270d55726a.svg",
+    "static/media/right_arrow.svg": "/UniqueJobSearch/static/media/right_arrow.c930fc642c2b34eb7925495f590ed5ba.svg",
+    "main.81066a7a.css.map": "/UniqueJobSearch/static/css/main.81066a7a.css.map",
+    "main.21960cb3.js.map": "/UniqueJobSearch/static/js/main.21960cb3.js.map",
     "787.3f83c8e8.chunk.js.map": "/UniqueJobSearch/static/js/787.3f83c8e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.924fef69.js"
+    "static/css/main.81066a7a.css",
+    "static/js/main.21960cb3.js"
   ]
 }
