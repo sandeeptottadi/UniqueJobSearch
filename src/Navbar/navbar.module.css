@@ -282,8 +282,10 @@
     display: none;
   }
   .logo,
-  .menubars,
   .login_link {
     margin-left: 20px;
+  }
+  .menubars {
+    margin-right: 20px;
   }
 }
