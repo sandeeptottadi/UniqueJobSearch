@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "./sidebar.module.css";
+import { useNavigate } from "react-router";
+import right_arrow from "../Svgs/right_arrow.svg";
 
 export default function Sidebar() {
+  const navigate = useNavigate();
   return (
     <div className={styles.sidebar_container} id="sidebar_container">
       <div className={styles.sidebar}>
@@ -30,6 +33,25 @@ export default function Sidebar() {
               <div className={styles.link_text}>Contact</div>
             </div>
           </div>
+        </div>
+        <hr />
+        <div className={styles.buttons}>
+          <button onClick={() => navigate("/login")} className={styles.button}>
+            Login
+            <img
+              alt="right arrow"
+              className={styles.right_arrow}
+              src={right_arrow}
+            />{" "}
+          </button>
+          <button onClick={() => navigate("/signup")} className={styles.button}>
+            Signup
+            <img
+              alt="right arrow"
+              className={styles.right_arrow}
+              src={right_arrow}
+            />{" "}
+          </button>
         </div>
       </div>
     </div>

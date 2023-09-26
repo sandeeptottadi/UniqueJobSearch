@@ -56,10 +56,11 @@
 }
 
 .sub_link {
+  overflow: hidden;
   height: 0px;
   width: calc(100% - 50px);
   margin-left: 50px;
-  background-color: red;
+  background-color: white;
   transition: 0.3s ease-in-out;
 }
 
@@ -67,4 +68,34 @@
   .sidebar_container {
     width: 0px;
   }
+}
+
+.buttons {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  background-color: #3762e3;
+  color: white;
+  padding: 15px 10px;
+  width: 400px;
+  max-width: 90%;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.button:hover {
+  background: linear-gradient(to left, hsl(225, 75%, 60%), hsl(225, 75%, 50%));
+}
+
+.right_arrow {
+  height: 15px;
+  width: 15px;
+  margin-left: 8px;
+  transition: 0.3s all ease-in-out;
 }
