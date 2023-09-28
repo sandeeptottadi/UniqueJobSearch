@@ -23,7 +23,7 @@
 .dropdown_item {
   width: 100%;
   margin: auto;
-  padding: 15px 8px;
+  padding: 10px 10px;
   display: flex;
   margin-bottom: 15px;
   align-items: center;
@@ -34,7 +34,7 @@
 .socials_dropdown_item {
   width: 40%;
   margin: auto;
-  padding: 15px 8px;
+  padding: 10px 10px;
   display: flex;
   height: fit-content;
   justify-content: center;
