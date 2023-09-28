@@ -84,23 +84,24 @@
   }
 }
 
-@media (max-width: 700px) {
-  .main_title {
-    margin-top: 50px;
-    width: 95%;
-    font-size: 1.9rem;
-  }
-  .sub_title {
-    width: 75%;
-  }
-}
-
 @media (max-width: 1000px) {
   .sub_title {
     width: 60%;
   }
   .main_title {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .main_title {
+    margin-top: 50px;
+    width: 95%;
+    font-size: 1.5rem;
+  }
+  .sub_title {
+    width: 85%;
+    font-size: 1rem;
   }
 }
 

@@ -89,12 +89,12 @@
 }
 
 .signup,
-.forget_password {
+.forgot_password {
   text-decoration: none;
   color: #547dfa;
 }
 
-.forget_password,
+.forgot_password,
 .signup_text {
   font-size: 1.05rem;
   font-weight: 500;
@@ -102,7 +102,7 @@
   font-weight: 450;
 }
 
-.forget_password {
+.forgot_password {
   margin-top: 10px;
   font-weight: 500x;
 }

@@ -55,7 +55,7 @@ export default function Login() {
                 type="email"
                 placeholder="Email"
               />
-              <label className={styles.label}>Passowrd</label>
+              <label className={styles.label}>Password</label>
               <input
                 className={styles.input}
                 type="password"
@@ -71,8 +71,8 @@ export default function Login() {
                 />
               </button>
             </form>
-            <Link to="#" className={styles.forget_password}>
-              Forget Password?
+            <Link to="#" className={styles.forgot_password}>
+              Forgot Password?
             </Link>
             <div className={styles.signup_text}>
               Already have an accound?{" "}
