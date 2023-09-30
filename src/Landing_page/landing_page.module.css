@@ -96,18 +96,27 @@
 @media (max-width: 700px) {
   .main_title {
     margin-top: 50px;
-    width: 95%;
-    font-size: 1.5rem;
+    width: 90%;
+    font-size: 1.6rem;
   }
   .sub_title {
     width: 85%;
     font-size: 1rem;
   }
+  .underline_title::after {
+    height: 1px;
+  }
 }
 
 @media (max-width: 450px) {
+  .main_title {
+    margin-top: 50px;
+    width: 80%;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+  }
   .get_started_btn {
-    width: 90%;
+    width: 85%;
     display: flex;
     justify-content: center;
   }

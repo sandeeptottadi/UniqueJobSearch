@@ -290,3 +290,21 @@
     margin-right: 20px;
   }
 }
+
+@media (max-width: 450px) {
+  .logo,
+  .login_link {
+    margin-left: 20px;
+  }
+  .logo {
+    height: 50px;
+    width: 50px;
+  }
+  .menubars {
+    height: 55px;
+    width: 55px;
+  }
+  .menubar {
+    height: 2px;
+  }
+}
