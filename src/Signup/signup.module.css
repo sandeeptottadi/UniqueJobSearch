@@ -210,6 +210,8 @@ img {
   font-weight: 200;
   color: black;
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 550px) {

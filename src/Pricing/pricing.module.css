@@ -1,6 +1,6 @@
 .pricing_container {
   position: relative;
-  height: 100vh;
+  height: fit-content;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
   content: "";
   position: absolute;
   top: 0%;
-  bottom: 30%;
+  height: 70vh;
   left: 0%;
   width: 100%;
   background-color: #f3f5ff;
@@ -40,8 +40,8 @@
 
 .pricing_blocks {
   display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
+  justify-content: space-around;
+  margin-top: 15px;
   flex-wrap: wrap;
 }
 
@@ -49,7 +49,7 @@
   width: 200px;
   height: 200px;
   background-color: white;
-  margin-right: 30px;
+  margin-right: 50px;
   border-radius: 10px;
   box-shadow: 0 24px 44px rgba(20, 20, 43, 0.04);
   cursor: pointer;
@@ -60,6 +60,8 @@
   flex-direction: column;
   font-size: 2rem;
   font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 15px;
   color: black;
 }
 
@@ -70,6 +72,7 @@
     hsl(234, 99%, 75%)
   );
   color: white;
+  scale: 1.1;
 }
 
 @media (max-width: 1000px) {
@@ -100,4 +103,53 @@
   padding: 8px;
   border: none;
   margin-top: 10px;
+  transition: 0.3s all ease-in-out;
+}
+
+.button:hover {
+  background-color: hsl(234, 99%, 55%);
+  scale: 1.05;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0%;
+}
+
+.advantages_container .main_title {
+  margin-top: 0px;
+  margin-bottom: 35px;
+  text-align: center;
+  line-height: 1.3rem;
+}
+
+.advantages_container {
+  width: fit-content;
+  padding: 50px;
+  height: fit-content;
+  background-color: #f3f5ff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 24px 44px rgba(20, 20, 43, 0.04);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.feature {
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: black;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 50px;
+  width: 50px;
 }

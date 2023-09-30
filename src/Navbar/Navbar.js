@@ -49,13 +49,7 @@ export default function Navbar() {
   return (
     <div ref={ref} animate={{ opacity: 1 }} style={{ width: "100%" }}>
       <Sidebar />
-      <motion.div
-        className={styles.navbar_container}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        variants={containerAnimation}
-        transition={{ duration: 0.5 }}
-      >
+      <div className={styles.navbar_container}>
         <div className={styles.title_container} onClick={() => navigate("/")}>
           <img alt="logo" className={styles.logo} src={logo} />
           <div className={styles.title}>Unique JobSearch</div>
@@ -163,7 +157,7 @@ export default function Navbar() {
             </div>
           </>
         )}
-      </motion.div>
+      </div>
     </div>
   );
 }
