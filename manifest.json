@@ -1,6 +1,7 @@
 {
   "short_name": "Unique JobSearch",
   "name": "Unique JobSearch",
+  "description": "A job board to find your dream tech job.",
   "icons": [
     {
       "src": "logo.svg",
