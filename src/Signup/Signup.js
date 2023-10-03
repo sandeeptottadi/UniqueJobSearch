@@ -1,20 +1,67 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./signup.module.css";
 import Navbar from "../Navbar/Navbar";
 import { Helmet } from "react-helmet";
 import right_arrow from "../Svgs/right_arrow.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import login_background_svg from "../Svgs/login_background_design.svg";
 import google_logo from "../Images/google_logo.png";
 import green_tick from "../Svgs/green_tick.svg";
 import { useInView, motion } from "framer-motion";
+import supabase from "../Supabase/Supabase";
 
 export default function Signup() {
   const ref = useRef(null);
+  const navigate = useNavigate();
   const isInView = useInView(ref, { once: true });
   const containerAnimation = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0 },
+  };
+
+  const handleGoogleLogin = async () => {
+    try {
+      const { user, session, error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        // user_metadata: {
+        //   isOnBoarded: false,
+        // },
+      });
+
+      if (error) {
+        console.error("Google login error:", error.message);
+      } else {
+        console.log("Logged in with Google as:", user);
+      }
+      console.log(session);
+    } catch (error) {
+      console.error("Error during Google login:", error.message);
+    }
+  };
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSignup = async (e) => {
+    e.preventDefault();
+    try {
+      const { user, error } = await supabase.auth.signUp({
+        email,
+        password,
+        // user_metadata: {
+        //   isOnBoarded: false,
+        // },
+      });
+
+      if (error) {
+        console.error("Signup error:", error.message);
+      } else {
+        console.log("Signed up as:", user);
+        navigate("/");
+      }
+    } catch (error) {
+      console.error("Error during signup:", error.message);
+    }
   };
   return (
     <div
@@ -97,7 +144,10 @@ export default function Signup() {
             src={login_background_svg}
           />
           <div className={styles.login_form_container}>
-            <button className={styles.google_login}>
+            <button
+              className={styles.google_login}
+              onClick={() => handleGoogleLogin()}
+            >
               <img
                 alt="google logo"
                 src={google_logo}
@@ -108,18 +158,20 @@ export default function Signup() {
             <div className={styles.hr}>
               <div className={styles.hr_text}>Or</div>
             </div>
-            <form style={{ width: "100%" }}>
+            <form onSubmit={handleSignup} style={{ width: "100%" }}>
               <label className={styles.label}>Email </label>
               <input
                 className={styles.input}
                 type="email"
                 placeholder="Email"
+                onChange={(e) => setEmail(e.target.value)}
               />
               <label className={styles.label}>Passowrd</label>
               <input
                 className={styles.input}
                 type="password"
                 placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
               />
               <button className={`${styles.input} ${styles.button}`}>
                 Sign up

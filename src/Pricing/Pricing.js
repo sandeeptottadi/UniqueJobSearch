@@ -25,6 +25,7 @@ export default function Pricing() {
         <title>Unique JobSearch - Pricing</title>
       </Helmet>
       <Navbar />
+
       <div className={styles.main_title}>Pricing</div>
       <div className={styles.sub_title}>
         We got you covered, Pick the pack that best suits your use case!
@@ -58,24 +59,37 @@ export default function Pricing() {
           $60/Year<button className={styles.button}>Subscribe</button>
         </motion.div>
       </div>
-      <motion.div
-        initial={{ y: 0 }}
-        animate={{ y: "30px" }}
-        transition={{ duration: 1, ease: "linear", repeat: Infinity }}
-      >
+      <div className={styles.pricing_blocks}>
+        <motion.div
+          className={styles.fremium_pricing_block}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={animatePricingBlocks}
+          transition={{ duration: 0.3 }}
+        >
+          <div>
+            Try it for <span style={{ color: "hsl(234, 99%, 65%)" }}>free</span>
+          </div>
+          0$<button className={styles.button}>Subscribe</button>
+        </motion.div>
+      </div>
+      <div className={styles.arrow_container}>
         <img className={styles.arrow} src={down_arrow} />
-      </motion.div>
+      </div>
       <div className={styles.advantages_container}>
-        <div className={styles.main_title}>For every plan,</div>
+        <div className={styles.main_title}>
+          For every{" "}
+          <span style={{ color: "hsl(234, 99%, 65%)" }}>paid plan</span>,
+        </div>
         <div className={styles.main_title}> We offer..</div>
         <ul className={styles.center}>
           <li className={styles.feature}>
             <img alt="tick" src={green_tick} className={styles.green_tick} />
-            Job Search
+            Upto 5 Job titles (Edit any time)
           </li>
           <li className={styles.feature}>
             <img alt="tick" src={green_tick} className={styles.green_tick} />
-            Company wise jobs
+            Upto 5 Locations (Edit any time)
           </li>
           <li className={styles.feature}>
             <img alt="tick" src={green_tick} className={styles.green_tick} />
