@@ -1,5 +1,9 @@
-RewriteEngine On RewriteBase /UniqueJobSearch/ # Replace with your GitHub reponame
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /UniqueJobSearch
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ./UniqueJobSearch/index.html [L]
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule . /index.html [L]
+</IfModule>
